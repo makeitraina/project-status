@@ -7,7 +7,7 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'null',
+            value: '',
           },
         ],
       },
