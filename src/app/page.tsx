@@ -2,7 +2,8 @@ import { copilotApi } from 'copilot-node-sdk';
 import Image from 'next/image';
 import { need } from '@/utils/need';
 import { TokenGate } from '@/components/TokenGate';
-import Status from '@/features/Status';
+import { Status } from '@/features/Status';
+import { SaveDate } from '@/features/SaveDate';
 
 const API_KEY = need<string>(process.env.COPILOT_API_KEY);
 
@@ -56,6 +57,7 @@ async function Content({ searchParams }: { searchParams: SearchParams }) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Status />
+      <SaveDate />
     </main>
   );
 }
